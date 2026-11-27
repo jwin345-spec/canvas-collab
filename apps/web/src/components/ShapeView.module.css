@@ -1,0 +1,54 @@
+.shape {
+  cursor: default;
+  outline: none;
+}
+
+.shape:focus-visible > :first-child {
+  stroke: var(--color-focus);
+  stroke-width: 3px;
+}
+
+.stickyBody {
+  filter: drop-shadow(0 2px 3px rgb(15 23 42 / 0.18));
+}
+
+.stickyText {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 14px;
+  overflow: hidden;
+  font: 500 15px/1.4 var(--font-sans);
+  color: #1f2937;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  user-select: none;
+  pointer-events: none;
+}
+
+.stickyText[data-empty] {
+  color: rgb(31 41 55 / 0.45);
+  font-style: italic;
+}
+
+.connector {
+  outline: none;
+}
+
+.connectorHit {
+  fill: none;
+  stroke: transparent;
+  stroke-width: 14px;
+}
+
+.connectorLine {
+  fill: none;
+  stroke-width: 2px;
+  pointer-events: none;
+}
+
+.connector[data-selected] .connectorLine,
+.connector:focus-visible .connectorLine {
+  stroke: var(--color-accent);
+  stroke-width: 3px;
+}

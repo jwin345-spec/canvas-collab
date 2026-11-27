@@ -1,0 +1,44 @@
+.zoom {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-panel);
+}
+
+.button,
+.level {
+  height: 32px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--color-text);
+  font: 500 14px/1 var(--font-sans);
+  cursor: pointer;
+}
+
+.button {
+  width: 32px;
+  font-size: 18px;
+}
+
+.level {
+  min-width: 56px;
+  font-variant-numeric: tabular-nums;
+}
+
+.button:hover,
+.level:hover {
+  background: var(--color-hover);
+}
+
+.button:focus-visible,
+.level:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 1px;
+}

@@ -1,0 +1,39 @@
+.container {
+  position: absolute;
+  inset: 0;
+}
+
+.canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--color-canvas);
+  touch-action: none;
+  user-select: none;
+  outline: none;
+}
+
+.canvas:focus-visible {
+  box-shadow: inset 0 0 0 3px var(--color-focus);
+}
+
+.canvas[data-tool='sticky'],
+.canvas[data-tool='rect'],
+.canvas[data-tool='ellipse'],
+.canvas[data-tool='connector'] {
+  cursor: crosshair;
+}
+
+.canvas[data-panning] {
+  cursor: grab;
+}
+
+.gridDot {
+  fill: var(--color-grid);
+}
+
+.connectPreview {
+  stroke: var(--color-accent);
+  stroke-dasharray: 6 4;
+  pointer-events: none;
+}

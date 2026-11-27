@@ -1,0 +1,49 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font: 500 13px/1 var(--font-sans);
+  background: var(--color-hover);
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.badge[data-tone='live'] .dot {
+  background: #16a34a;
+  box-shadow: 0 0 0 3px rgb(22 163 74 / 0.2);
+}
+
+.badge[data-tone='pending'] .dot {
+  background: #f59e0b;
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+.badge[data-tone='offline'] {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.badge[data-tone='offline'] .dot {
+  background: #dc2626;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.35;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .badge[data-tone='pending'] .dot {
+    animation: none;
+  }
+}

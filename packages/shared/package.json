@@ -1,0 +1,23 @@
+{
+  "name": "@canvas-collab/shared",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Shared board schema, Yjs document helpers, wire protocol and the browser/Node sync provider.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/index.ts",
+    "./client": "./src/client/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "lib0": "^0.2.114",
+    "y-protocols": "^1.0.6",
+    "yjs": "^13.6.27",
+    "zod": "^4.1.0"
+  }
+}

@@ -1,0 +1,59 @@
+.selection {
+  pointer-events: none;
+}
+
+.selectionBox {
+  fill: none;
+  stroke: var(--color-accent);
+}
+
+.handle {
+  fill: #fff;
+  stroke: var(--color-accent);
+  pointer-events: all;
+}
+
+.remote {
+  pointer-events: none;
+}
+
+.cursor {
+  transition: transform 80ms linear;
+}
+
+.cursorLabel {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font: 600 12px/1.4 var(--font-sans);
+  color: #fff;
+  white-space: nowrap;
+  box-shadow: 0 1px 2px rgb(15 23 42 / 0.25);
+}
+
+.marquee {
+  fill: rgb(59 130 246 / 0.08);
+  stroke: var(--color-accent);
+  stroke-dasharray: 4 3;
+  pointer-events: none;
+}
+
+.stickyEditor {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 14px;
+  border: 2px solid var(--color-accent);
+  border-radius: 6px;
+  background: transparent;
+  font: 500 15px/1.4 var(--font-sans);
+  color: #1f2937;
+  resize: none;
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor {
+    transition: none;
+  }
+}
